@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+
+/* Мобильные устройства (до 480px) */
+/* @media (max-width: 480px) { ... } */
+
+/* Планшеты в портретной ориентации (768px) */
+/* @media (min-width: 481px) and (max-width: 768px) { ... } */
+
+
+
+/* Небольшие десктопы и ноутбуки (1280px) */
+/* @media (min-width: 1025px) and (max-width: 1280px) { ... } */
+
+/* Большие экраны (больше 1280px) */
+/* @media (min-width: 1281px) { ... } */
+
+
+*{
+  box-sizing: border-box;
+  margin: 0;
+  font-family: "Playfair Display", serif;
+  font-size: 24px;
+  color: #FFFFFF;
+}
+
+#header{
+
+  background-color: #1B3764;
+}
+
+.container{
+  margin: 0 5%;
+}
+
+.grid_container{
+  display: grid;
+  padding: 10px;
+}
+
+.flex_container{
+  display: flex;
+}
+
+ul{
+  list-style: none;
+}
+
+a{
+  text-decoration: none;
+}
+
+.social_media{
+  gap: 3%;
+}
+
+.header_nav_container{
+  grid-template-columns: 1fr 1fr;
+}
+
+.hidden{
+  display: none;
+}
+
+.flex_column{
+  flex-direction: column;
+}
+
+.navbar_button{
+  position: absolute;
+  left: 50%;
+  cursor: pointer;
+}
+
+.navbar{
+  gap: 2%;
+}
+
+.header_main{
+  grid-template-columns: 1fr 1fr;
+}
+
+.main_img{
+  width: 80%;
+}
+
+.paragraph{
+  display: inline-block;
+  width: 50px;
+  height: 5px;
+  background-color: rgb(255, 202, 66);
+  border-radius: 20%;
+  margin-right: 3%;
+}
+
+.main_img_flex_item{
+  height: 70vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex_main{
+  justify-content: center;
+  align-items: center;
+  height: 70vh;
+  gap: 20px;
+}
+
+h1{
+  font-size: 1.8em;
+}
+
+.name{
+  font-size: 1em;
+  background-color: rgb(255, 202, 66, .8);
+  border-radius: 3%;
+}
+
+.welcome{
+  font-size: 1.5em;
+  font-weight: 400;
+}
+
+.header_info{
+  font-size: 1.5em;
+}
