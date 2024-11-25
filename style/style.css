@@ -27,6 +27,7 @@
 #header{
   color: #FFFFFF;
   background-color: #1B3764;
+  padding-bottom: 3%;
 }
 
 .container{
@@ -61,6 +62,21 @@ a{
 
 .hidden{
   display: none;
+}
+
+.show{
+  display: block;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from{
+      opacity: 0.1;
+  }
+  to{
+      opacity: 1;
+  }
 }
 
 .flex_column{
@@ -164,6 +180,15 @@ h1{
   width: 80%;
 }
 
+.flex_item p::first-letter{
+  background-color: rgb(255, 202, 66);
+  font-size: 2em;
+}
+
+.flex_item p{
+  border: #1B3764 solid;
+}
+
 #main>.container>h2{
   text-align: center;
   font-size: 1.7em;
@@ -174,3 +199,4 @@ h1{
 .tab_nav_item:hover{
   background: rgb(255, 202, 66);
 }
+
