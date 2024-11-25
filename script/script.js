@@ -3,7 +3,10 @@ document.addEventListener('DOMContentLoaded', () =>{
           navbar = document.querySelector('.navbar'),
           tabContent = document.querySelectorAll('.tab_content'),
           tabNavParent = document.querySelector('.grid_main_item_2'),
-          tabNav = tabNavParent.querySelectorAll('.tab_nav_item');
+          tabNav = tabNavParent.querySelectorAll('.tab_nav_item'),
+          parentDescription = document.querySelector('.safety_container'),
+          btnDescription = parentDescription.querySelectorAll('.btn_safety'),
+          paragraphDescription = parentDescription.querySelectorAll('.safety_paragraph');
 
     //navbar
 
@@ -28,9 +31,9 @@ document.addEventListener('DOMContentLoaded', () =>{
     hideTab();
     showTab();
 
-    let counter = 0;
+    let counter = 1;
     
-    setInterval(()=>{
+    const autoTab = setInterval(()=>{
         hideTab();
         showTab(counter);
         if(counter == tabContent.length - 1){
@@ -63,11 +66,23 @@ document.addEventListener('DOMContentLoaded', () =>{
             tabNav.forEach((item, i) =>{
                 if(item == e.target) {
                     hideTab();  
-                    showTab(i);         
+                    showTab(i);
+                    clearInterval(autoTab);         
                 }
             })
         }
     })
+
+    paragraphDescription.forEach(item =>{
+        item.classList.add('hidden');
+    })
+
+    parentDescription.addEventListener('click', (e)=>{
+        if(e.target && e.target.classList.contains('btn_safety')){
+            console.log(123);
+            
+        }
+    });
 });
 
 //safety
