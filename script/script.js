@@ -24,6 +24,23 @@ document.addEventListener('DOMContentLoaded', () =>{
     hideTab();
     showTab();
 
+    let counter = 0;
+    
+    setInterval(()=>{
+        hideTab();
+        showTab(counter);
+        if(counter == tabContent.length - 1){
+            counter = 0;
+        } else {
+            counter++;
+        }
+    
+        console.log(counter);
+        
+        
+    }, 8000);
+    
+
     function hideTab(){
         tabContent.forEach(item => {
             item.classList.add('hidden'),
