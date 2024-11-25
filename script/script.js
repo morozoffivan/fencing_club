@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', () =>{
           tabNavParent = document.querySelector('.grid_main_item_2'),
           tabNav = tabNavParent.querySelectorAll('.tab_nav_item');
 
+    //navbar
 
     function hideNav(selector){
         selector.classList.toggle('hidden');
@@ -20,6 +21,9 @@ document.addEventListener('DOMContentLoaded', () =>{
     nav_btn.addEventListener('click', () =>{
         hideNav(navbar)
     });
+
+
+    //tabs
 
     hideTab();
     showTab();
@@ -65,3 +69,5 @@ document.addEventListener('DOMContentLoaded', () =>{
         }
     })
 });
+
+//safety

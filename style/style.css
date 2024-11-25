@@ -151,6 +151,8 @@ h1{
   color: #d6d2d2;
 }
 
+
+/* main section */
 #main{
   color: #1B3764;
 }
@@ -187,6 +189,8 @@ h1{
 
 .flex_item p{
   border: #1B3764 solid;
+  border-left: none;
+  border-right: none;
 }
 
 #main>.container>h2{
@@ -200,3 +204,13 @@ h1{
   background: rgb(255, 202, 66);
 }
 
+/* safety */
+
+#safety {
+  background-color: rgb(255, 202, 66);
+  margin-top: 2%;
+}
+
+.safety_container{
+  align-items: center;
+}
