@@ -34,10 +34,6 @@ document.addEventListener('DOMContentLoaded', () =>{
         } else {
             counter++;
         }
-    
-        console.log(counter);
-        
-        
     }, 8000);
     
 
