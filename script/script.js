@@ -1,12 +1,15 @@
 document.addEventListener('DOMContentLoaded', () =>{
-    const nav_btn = document.querySelector('.navbar_button'),
+    const navBtn = document.querySelector('.navbar_button'),
           navbar = document.querySelector('.navbar'),
           tabContent = document.querySelectorAll('.tab_content'),
           tabNavParent = document.querySelector('.grid_main_item_2'),
           tabNav = tabNavParent.querySelectorAll('.tab_nav_item'),
           parentDescription = document.querySelector('.safety_container'),
           btnDescription = parentDescription.querySelectorAll('.btn_safety'),
-          paragraphDescription = parentDescription.querySelectorAll('.safety_paragraph');
+          paragraphDescription = parentDescription.querySelectorAll('.safety_paragraph'),
+          imgGallery = document.querySelectorAll('.flex_item_gallery'),
+          imgNext = document.querySelector('.prev'),
+          imgPrev = document.querySelector('.next');
 
     //navbar
 
@@ -16,12 +19,12 @@ document.addEventListener('DOMContentLoaded', () =>{
     }
 
     function adaptive(){
-        window.innerWidth < 1000 ? navbar.classList.toggle('hidden') : nav_btn.classList.toggle('hidden') ;
+        window.innerWidth < 1000 ? navbar.classList.toggle('hidden') : navBtn.classList.toggle('hidden') ;
     }
 
     adaptive();
 
-    nav_btn.addEventListener('click', () =>{
+    navBtn.addEventListener('click', () =>{
         hideNav(navbar)
     });
 
@@ -73,16 +76,70 @@ document.addEventListener('DOMContentLoaded', () =>{
         }
     })
 
+    //safety
+
     paragraphDescription.forEach(item =>{
         item.classList.add('hidden');
     })
 
     parentDescription.addEventListener('click', (e)=>{
         if(e.target && e.target.classList.contains('btn_safety')){
-            console.log(123);
+            btnDescription.forEach((item,i) =>{
+                if(e.target == item) {
+                    paragraphDescription[i].classList.toggle('hidden');
+                }
+            })
             
         }
     });
+    //gallery
+
+    let index = 1;
+    
+    imgGallery.forEach(item => {
+        item.classList.add('hidden');
+    });
+
+    imgGallery[0].classList.add('show');
+    imgGallery[0].classList.remove('hidden');
+
+    function showImg(i){
+        if(i > imgGallery.length){
+            index = 1;
+        }
+        if(i < 1){
+            index = imgGallery.length;
+        }
+
+        imgGallery.forEach(item => {
+            item.classList.add('hidden');
+        });
+        imgGallery.forEach(item => {
+            item.classList.remove('show');
+        });
+        
+        imgGallery[index - 1].classList.remove('hidden');
+        imgGallery[index - 1].classList.add('show');
+
+    };
+
+    function slider(i) {
+        showImg(index += i)
+    };
+
+    imgNext.addEventListener('click', () =>{
+        slider(1);
+    });
+
+    imgPrev.addEventListener('click', () =>{
+        slider(-1);
+    });
+
+
+
+
 });
 
-//safety
+
+
+
