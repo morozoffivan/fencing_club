@@ -1,0 +1,12 @@
+User-agent: *
+
+Disallow: /admin/
+Disallow: /login/
+Disallow: /cart/
+Disallow: /search/
+Disallow: /privacy-policy/
+Disallow: /terms-and-conditions/
+
+Allow: /assets/
+
+Sitemap: https://fencing123.ru/sitemap.xml
