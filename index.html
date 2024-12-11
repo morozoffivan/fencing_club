@@ -89,6 +89,7 @@
                         Привет! Меня зовут Морозов Иван. Я дипломированный тренер с более чем 10-летним опытом работы и 15-летним спортивным опытом. Я верю, что мотивация к занятиям должна возникать естественным образом, поэтому в моей работе я применяю исключительно педагогические методы. Моя цель - помочь каждому ученику раскрыть свой потенциал, создавая комфортную и поддерживающую обстановку. Давайте вместе достигать новых высот!
                     </p>
                 </div>
+                <button class="modal-btn">Записаться на пробное занятие</button>
             </div>
         </div>
        
@@ -206,6 +207,25 @@
             <button>&rarr;</button>
         </div>
     </section>
+
+    
+    <div class="modal hidden">
+        <div class="modal__dialog">
+            <div class="modal__content">
+                <form action="#">
+                    <div class="modal__close">&times;</div>
+                    <div class="modal__title">Мы свяжемся с вами как можно быстрее!</div>
+                    <input required placeholder="Ваше имя" name="name" type="text" class="modal__input">
+                    <input required placeholder="Ваш номер телефона" name="phone" type="phone" class="modal__input">
+                    <button class="btn btn_dark btn_min">Перезвонить мне</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <button class="modal-btn">Записаться на пробное занятие</button>
+    </div>
 
     <section id="contacts">
 

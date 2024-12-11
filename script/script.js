@@ -136,7 +136,23 @@ document.addEventListener('DOMContentLoaded', () =>{
     });
 
 
+    //modal
 
+    const btnModal = document.querySelectorAll('.modal-btn'),
+          modal = document.querySelector('.modal'),
+          modalClose = document.querySelector('.modal__close');
+
+    btnModal.forEach(item =>{
+        item.addEventListener('click', ()=>{
+            modal.classList.toggle('hidden');
+        })
+    })
+
+    modalClose.addEventListener('click', ()=>{
+        modal.classList.toggle('hidden');
+
+        
+    })
 
 });
 
